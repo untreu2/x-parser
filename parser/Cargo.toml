@@ -1,0 +1,9 @@
+[package]
+name = "parser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+headless_chrome = "1.0.15"
+scraper = "0.14"
+regex = "1"
