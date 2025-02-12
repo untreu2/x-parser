@@ -1,0 +1,12 @@
+[package]
+name = "parserapi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1.0", features = ["derive"] }
+config = "0.13"
+headless_chrome = "1.0.15"
+regex = "1"
+scraper = "0.14"
