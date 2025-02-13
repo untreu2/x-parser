@@ -25,3 +25,8 @@ cd x-parser
 cd parserapi
 cargo run --release
 ```
+
+An example of a curl call to the API:
+```
+curl -G "http://127.0.0.1:8080/tweet_url" --data-urlencode "tweet_url=https://twitter.com/example/status/1234567890"
+```
