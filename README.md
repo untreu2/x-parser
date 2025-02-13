@@ -2,7 +2,7 @@
 
 For the tool, use /parser.
 
-For the API, user /parserapi.
+For the API, use /parserapi.
 
 ## How to run the tool?
 
