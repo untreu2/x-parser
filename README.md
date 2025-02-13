@@ -8,6 +8,7 @@ For the API, user /parserapi.
 
 ```
 git clone https://github.com/untreu2/x-parser.git
+cd x-parser
 cd parser
 cargo run --release
 ```
@@ -20,6 +21,7 @@ In parserapi/config.toml, you can define the server address.
 
 ```
 git clone https://github.com/untreu2/x-parser.git
+cd x-parser
 cd parserapi
 cargo run --release
 ```
