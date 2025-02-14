@@ -1,3 +1,4 @@
+use actix_cors::Cors;
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 use config::Config;
 use headless_chrome::{Browser, LaunchOptionsBuilder};
@@ -140,8 +141,12 @@ async fn main() -> std::io::Result<()> {
 
     println!("Server is running on {}...", bind_address);
 
-    HttpServer::new(|| App::new().route("/tweet_url", web::get().to(tweet_handler)))
-        .bind(bind_address)?
-        .run()
-        .await
+    HttpServer::new(|| {
+        App::new()
+            .wrap(Cors::permissive())
+            .route("/tweet_url", web::get().to(tweet_handler))
+    })
+    .bind(bind_address)?
+    .run()
+    .await
 }
